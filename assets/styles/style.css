@@ -1,0 +1,222 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Arvo', serif;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+}
+
+.loginWrapper {
+    width: 600px;
+    margin: auto;
+}
+
+header{
+    width: 100%;
+    margin-top: 10vh;
+    height: 87vh;
+    background-position: center;
+    background-image: url(../images/background.jpg);
+}
+.scroller{
+    background-color: rgb(255, 213, 213);
+    height: 3vh;
+    width: 100%;
+    text-align: center;
+}
+.scroller img{
+    height: 90%;
+}
+.title{
+    color: white;
+    font-size: calc(15px + 2.75vw);
+    width: 60%;
+    text-align: center;
+}
+nav{
+    width: 100%;
+    background-color: rgba(250, 250, 250, 1);
+    display: flex;
+    height: 10vh;
+    min-height: 50px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    transition: 0.3s ease-in-out;
+}
+.logo{
+    height: 100%;
+    flex: 1;
+    text-align: center;
+}
+.logo img{
+    height: 100%;
+}
+.navLinks{
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    list-style: none;
+    height: 100%;
+}
+.logIn{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    list-style: none;
+    height: 100%;
+}
+.navLinks a{
+    text-decoration: none;
+    color: black;
+    font-size: calc(10px + 0.35vw);
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.navLink{
+    width: 100%;
+    text-align: center;
+}
+.navLinks a img{
+    height: 4.5vh;
+    min-height: 30px;
+    display: none;
+}
+.navLinks a:hover{
+    background-color: rgb(240,240,240);
+}
+@media (max-width: 768px){
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo img{
+        height: 70%;
+    }
+    .navLinks .navLink{
+        display: none;
+    }
+    .navLinks a{
+        justify-content: center;
+    }
+    .navLinks a img{
+        display: block;
+    }
+    .logIn{
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex: 0;
+    }
+    .logInBtn {
+        padding: 6px 0;
+        width: 60px;
+        /* font-size: 15px; */
+    }
+}
+.logInBtn{
+    font-size: 1.7vh;
+    padding: 11px 22px;
+    border-radius: 15%;
+    border: none;
+    transition: .3s ease-in-out;
+}
+.logIn a{
+    margin-right: 2vw;
+}
+ .logIn a:nth-of-type(1){
+    margin-left: auto;
+}
+.logIn a:nth-of-type(1) input{
+    background-color: rgb(255, 208, 52);
+}
+.logIn a:nth-of-type(1) input:hover{
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+}
+.logIn a:nth-of-type(2) input{
+    background-color: rgb(230, 230, 230);
+}
+.logIn a:nth-of-type(2) input:hover{
+    background-color: rgb(255, 208, 52);
+    cursor: pointer;
+}
+@media (max-width: 960px){
+    .navLinks{
+        flex: 3;
+    }
+    .logInBtn{
+        font-size: 1.6vh;
+        padding: 7px 12px;
+        border-radius: 15%;
+        border: none;
+        transition: .3s;
+    }
+    /* .navLinks a{
+        font-size: 1.5vh;
+    } */
+    .navLinks{
+        justify-content: space-between;
+    }
+}
+footer{
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+}
+.footerContent{
+    flex: 1;
+    display: flex;
+    padding: 30px 3vw 50px 3vw;
+}
+.support{
+    flex: 1;
+    list-style: none;
+}
+.support a{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 22px;
+}
+.support p{
+    color: rgb(210,210,210);
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+.footerContent span{
+    flex: 1;
+    color: rgb(210,210,210);
+    text-align: right;
+    font-size: 1.1em;
+}
+.copyrights{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 3vw;
+    color: white;
+    font-size: 1em;
+}
+.mediaBar{
+    position: fixed;
+    z-index: 999;
+    width: 3vw;
+    right: 0;
+    height: 100%;
+    background-color: transparent;
+    padding-top: 56vh;
+}
+.mediaBarContent{
+    height: 100%;
+    width: 70%;
+    top: 0;
+    margin: auto;
+    min-width: 50px;
+}
+.mediaBarContent img{
+    margin-top: 20px;
+    width: 90%;
+}  

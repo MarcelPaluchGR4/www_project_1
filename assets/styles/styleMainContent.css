@@ -1,0 +1,70 @@
+.mainContent{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 4vh 2vw 0 2vw;
+}
+#articles{
+    background-color: cyan;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    height: auto;
+}
+#articles .article{
+    width: 31%;
+    min-width: 400px;
+    margin: 10px 0;
+}
+.article a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    transition: .2s;
+}
+#articles .article a img{
+    width: 75%;
+}
+#articles a{
+    text-decoration: none;
+    color: black;
+}
+#articles a:hover{
+    background-color: rgba(50, 50, 50, 0.1);
+}
+.article a span{
+    width: 75%;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    height: 5em;
+    padding-top: 10px;
+}
+.article h2 {
+    margin-bottom: 8px;
+}
+#workout{
+    background-color: yellow;
+}
+#diet{
+    background-color: lightblue;
+}
+#store{
+    background-color: lightpink;
+}
+@media (max-width: 900px){
+    #articles .article{
+        width: 85%;
+        align-self: center;
+    }
+    #articles .article a{
+        width: 100%;
+        flex-direction: row;
+    }
+    #articles .article a img{
+        width: 65%;
+    }
+}

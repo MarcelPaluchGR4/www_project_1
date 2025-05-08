@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html id="top" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness moja pasja</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link href="./assets/styles/style.css" rel="stylesheet">
+    <link href="./assets/styles/styleRegisterPage.css" rel="stylesheet">
+</head>
+<body>
+    <div class="mediaBar">
+        <div class="mediaBarContent">
+            <a href="http://facebook.com" target="_blank"><img src="./assets/images/facebook.png" alt="facebook"></a>
+            <a href="http://instagram.com" target="_blank"><img src="./assets/images/insta.png" alt="insta"></a>
+            <a href="http://twitter.com" target="_blank"><img src="./assets/images/twitter.png" alt="twitter"></a>
+        </div>
+    </div>
+        <nav>
+            </div>
+            <ul class="navLinks">
+                <a href="#top"><img src="./assets/images/homeIcon.png" alt="Home"><li class="navLink"> Home </li></a>
+                <a href="#articles"><img src="./assets/images/articlesIcon.png" alt="Articles"><li class="navLink"> Artykuly </li></a>
+                <a href="./workout.html"><img src="./assets/images/workoutIcon.png" alt="Workout"><li class="navLink"> Treningi </li></a>
+                <a href="./diets.html"><img src="./assets/images/dietIcon.png" alt="Diet"><li class="navLink"> Diety </li></a>
+            </ul>
+            <ul class="logIn">
+                <a href="./login.html"><li class="navLink"><input type="button" class="logInBtn" value="Zaloguj"></li></a>
+                <a href="./register.html"><li class="navLink"><input type="button" class="logInBtn" value="Zarejestruj"></li></a>
+            </ul>
+        </nav>
+    <div class="container">
+        <form id="myForm">  
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="emailError"></span>
+    
+            <label for="password">Haslo:</label>
+            <input type="password" id="password" name="password" required minlength="6">
+            <span class="error" id="passwordError"></span>
+    
+            <button type="submit">Zaloguj</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            let valid = true;
+
+            let email = document.getElementById('email').value;
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').textContent = 'Wprowadz poprawny adres email';
+                valid = false;
+            } else {
+                document.getElementById('emailError').textContent = '';
+            }
+
+            let password = document.getElementById('password').value;
+            if (password.length < 6) {
+                document.getElementById('passwordError').textContent = 'Haslo musi skladac sie z minimum 6 znakow';
+                valid = false;
+            } else {
+                document.getElementById('passwordError').textContent = '';
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.workoutsWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.workout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+.workoutImage {
+    width: 50%;
+}
